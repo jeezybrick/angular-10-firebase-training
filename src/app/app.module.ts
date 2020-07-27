@@ -7,6 +7,10 @@ import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/firestore";
 import {AngularFireAnalyticsModule} from "@angular/fire/analytics";
+import {AngularFireMessagingModule} from "@angular/fire/messaging";
+import {BUCKET} from "@angular/fire/storage";
+
+const environmentOriginal: any = environment;
 
 @NgModule({
   declarations: [
@@ -15,9 +19,10 @@ import {AngularFireAnalyticsModule} from "@angular/fire/analytics";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environmentOriginal.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireMessagingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,3 +6,21 @@
   <p>Please login.</p>
   <button (click)="login()">Login with Google</button>
 </ng-template>
+
+<br><br>
+
+<button (click)="requestPermission()">
+  Hello this is a chat app. You should let us send you notifications for this reason.
+</button>
+
+<br><br>
+
+<button (click)="listen()">
+  Get notified!
+</button>
+
+<br><br>
+
+<input type="file" (change)="uploadFile($event)" />
+<div>{{ uploadPercent | async }}</div>
+<a [href]="downloadURL | async">{{ downloadURL | async }}</a>
