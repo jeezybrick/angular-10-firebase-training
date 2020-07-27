@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-10-firebase-training": {
+      "hosting": {
+        "firebase-angular-app": [
+          "angular-10-firebase-training"
+        ]
+      }
+    }
+  }
+}
